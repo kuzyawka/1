@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("Naidem perimetr i ploschad pryamougolnika so storonami a i b: ");
+		int a;
+	int b;
+	printf("Vvedite a: ");
+	scanf_s("%d", &a);
+	printf("Vvedite b: ");
+	scanf_s("%d", &b);
+	int plo;
+	plo= a * b;
+	int per;
+	per= (a + b) * 2;
+	printf("Znachenie ploschadi = %i \n", plo);
+	
+	printf("Znachenie perimetra = %i", per);
+	return 0;
+}
