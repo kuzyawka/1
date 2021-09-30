@@ -1,0 +1,35 @@
+#include <math.h>
+#include <stdio.h>
+int main()
+{
+	printf("Naidem summy, rasnost, proizvedenie, chastnoe dvux chisel: ");
+	int x;
+	int y;
+	printf("\n Vvedite x:");
+	scanf_s("%d", &x);
+	printf("\n Vvedite y:");
+	scanf_s("%d", &y);
+	x = pow(x, 2);
+	y = pow(y, 2);
+	int sum = x + y;
+	int raz;
+	float chas;
+	if (x > y)
+	{
+		raz = x - y;
+		chas = (float)x / y;
+	}
+	else
+	{
+		raz = y - x;
+		chas = (float)y / x;
+	}
+	int pr = x * y;
+	printf("\nSumma = %i", sum);
+	printf("\n Raz= %i", raz);
+	printf("\n Proizvedenie= %i", pr);
+	printf("\n Chastnoe= %f", chas);
+	return 0;
+	
+
+}
