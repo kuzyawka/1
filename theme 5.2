@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem dliny otrezkov iz tochek (a, b, c) na chislovoy osi i ix summu");
+	int ac; int a; int b; int c;
+	int bc;
+	int sum;
+	printf("\nVvedem a: ");
+	scanf_s("%d", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%d", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%d", &c);
+	ac = abs(a - c);
+	bc = abs(b - c);
+	sum = ac + bc;
+	printf("(\nDlina AC=%i, \nDlina bc= %i, \nSumma dlin= %i)", ac, bc, sum);
+	return 0;
+}
