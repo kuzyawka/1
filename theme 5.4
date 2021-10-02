@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem dloschad i perimetr pryamougolnika s vershinami (x1, y1) i (x2, y2) ");
+	int x1; int x2; int y1; int y2; int plosch; int per; int a; int b;
+	printf("\nVvedem x1: ");
+	scanf_s("%d", &x1);
+	printf("\nVvedem y1: ");
+	scanf_s("%d", &y1);
+	printf("\nVvedem x2: ");
+	scanf_s("%d", &x2);
+	printf("\nVvedem y2: ");
+	scanf_s("%d", &y2);
+	a = abs(y2 - y1);
+	b = abs(x1 - x2);
+	per = (a + b) * 2;
+	plosch = a * b;
+	printf("(\nPerimetr= %i, \nPloschad= %i)", per, plosch);
+	return 0;
+}
