@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem proizvedenie otrezkov iz tochek (a, b, c) na chislovoy osi");
+	int ac; int a; int b; int c;
+	int bc;
+	int pr;
+	printf("\nVvedem a: ");
+	scanf_s("%d", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%d", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%d", &c);
+	ac = abs(a - c);
+	bc = abs(b - c);
+	pr = ac * bc;
+	printf("\nProizvedenie dlin= %i", pr);
+	return 0;
+}
