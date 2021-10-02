@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem rasstoyanie mezhdu dvumya tochkami s zadannymy koordinatamy (x1, y1) (x2, y2)");
+	int x1;
+	int y1;
+	int x2;
+	int y2;
+	printf("\nVvedem x1:");
+	scanf_s("%d", &x1);
+	printf("\nVvedem y1:");
+	scanf_s("%d", &y1);
+	printf("\nVvedem x2:");
+	scanf_s("%d", &x2);
+	printf("\nVvedem y2:");
+	scanf_s("%d", &y2);
+	float rass;
+	rass = sqrt((float)pow((x2 - x1), 2) + pow((y2 - y1), 2));
+	printf("\nRasstoyanie mezhdu tochkami=%f", rass);
+	return 0;
+}
