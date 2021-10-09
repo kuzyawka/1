@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main()
+{
+	printf("Pomenyaem znachenia peremennix a i b mestami:");
+	int a; int b; int x;
+	printf("\nVvedem a: ");
+	scanf_s("%d", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%d", &b);
+	x = a;
+	a = b;
+	b = x;
+	printf("(\nZnachenie a= %i, \nZnachenie b= %i", a, b);
+	return 0;
+}
