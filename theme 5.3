@@ -2,7 +2,7 @@
 #include <math.h>
 int main()
 {
-	printf("Naidem proizvedenie otrezkov iz tochek (a, b, c) na chislovoy osi c mezhdu a i b ");
+	printf("Naidem proizvedenie otrezkov iz tochek (a, b, c) na chislovoy osi pri chem c mezhdu a i b ");
 	int ac; int a; int b; int c;
 	int bc;
 	int pr;
@@ -12,9 +12,16 @@ int main()
 	scanf_s("%d", &b);
 	printf("\nVvedem c: ");
 	scanf_s("%d", &c);
-	ac = abs(a - c);
-	bc = abs(b - c);
-	pr = ac * bc;
-	printf("\nProizvedenie dlin= %i", pr);
+	if (((a < c) && (c < b)) || ((a > c) && (c > b)))
+	{
+		ac = abs(a - c);
+		bc = abs(b - c);
+		pr = ac * bc;
+		printf("\nProizvedenie dlin= %i", pr);
+	}
+	else
+	{
+		printf("\nNe sootvetstvuet usloviu zadachi");
+	}
 	return 0;
 }
