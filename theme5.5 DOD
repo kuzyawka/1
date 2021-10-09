@@ -3,25 +3,26 @@
 int main()
 {
 	printf("Naidem perimetr i ploschad treugolnika s vershinami (x1, y1), (x2, y2), (x3, y3): ");
-	int x1; int x2; int x3; int y1; int y2; int y3; float per;float plosch; float ab; float bc; float ca; float poluper;
+	float x1; float x2; float x3; float y1; float y2; float y3; float per; float plosch; float ab; float bc; float ca; float poluper;
 	printf("\nVvedem x1: ");
-	scanf_s("%d", &x1);
+	scanf_s("%f", &x1);
 	printf("\nVvedem y1: ");
-	scanf_s("%d", &y1);
+	scanf_s("%f", &y1);
 	printf("\nVvedem x2: ");
-	scanf_s("%d", &x2);
+	scanf_s("%f", &x2);
 	printf("\nVvedem y2: ");
-	scanf_s("%d", &y2);
+	scanf_s("%f", &y2);
 	printf("\nVvedem x3: ");
-	scanf_s("%d", &x3);
+	scanf_s("%f", &x3);
 	printf("\nVvedem y3: ");
-	scanf_s("%d", &y3);
-	ab = sqrt(sqr(x2 - x1) + sqr(y2 - y1));
-	bc = sqrt(sqr(x3 - x2) + sqr(y3 - y2));
-	ca = sqrt(sqr(x3 - x1) + sqr(y3 - y1));
-	per = ac + bc + ca;
-	poluper = per(float) / 2;
-	plosch = sqrt(poluper(float) * (poluper(float) - ac) * (poluper(float) - bc) * (poluper(float) - ca));
+	scanf_s("%f", &y3);
+	ab = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
+	bc = sqrt(pow((x3 - x2), 2) + pow((y3- y2), 2));
+	ca = sqrt(pow((x3 - x1), 2) + pow((y3 - y1), 2));
+
+	per = ab + bc + ca;
+	poluper = per / 2;
+	plosch = sqrt(poluper * (poluper - ab) * (poluper - bc) * (poluper - ca));
 	printf("(\nPer= %f, \nPlosch= %f)", per, plosch);
 	return 0;
 }
