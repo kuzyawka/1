@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+	printf("Izmenim znachenie peremennoy a na b, b na c, c na a:");
+	int a, b, c, x1, x2;
+	printf("\nVvedem znachenie peremennoi a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem znachenie peremennoi b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem znachenie peremennoi c: ");
+	scanf_s("%i", &c);
+	x1 = b;
+	b = c;
+	c = a;
+	a = x1;
+	printf("(\nZnachenie a= %i, \nZnachenie b= %i, \nZnachenie c= %i)", a, b, c);
+	return 0;
+}
