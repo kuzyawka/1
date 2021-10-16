@@ -3,10 +3,10 @@
 int main()
 {
 	printf("Naidem znachenie a^8 ispolzuya vspomogatelnuy peremennuy i 3 operazii umnozheniya: ");
-	int a,x, rez;
+	int a, x;
 	printf("\nVvedem a: ");
 	scanf_s("%i", &a);
 	x = pow(a, 2);
-	rez = x * x * pow(x, 2);
-	printf("\nRezultat= %i", rez);
+	a = x * x * pow(x, 2);
+	printf("\nRezultat= %i", a);
 }
