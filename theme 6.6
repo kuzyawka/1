@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem znachenie a^8 ispolzuya vspomogatelnuy peremennuy i 3 operazii umnozheniya: ");
+	int a,x, y, rez;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	x = pow(a, 4);
+	y = pow(a, 2);
+	rez = x * x *x*y*a;
+	printf("\nRezultat= %i", rez);
+}
