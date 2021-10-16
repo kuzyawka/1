@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main()
 {
-	printf("Pomenyaem znacheniya a na b, b na c, c na a: ");
-	int a; int b; int c; int x; int y;
+	printf("Pomenyaem znacheniya b na a,c na b, a na c: ");
+	int a; int b; int c; int x;
 	printf("\nVvedem a: ");
 	scanf_s("%i", &a);
 	printf("\nVvedem b: ");
@@ -10,10 +10,9 @@ int main()
 	printf("\nVvedem c: ");
 	scanf_s("%i", &c);
 	x = a;
-	y = b;
-	a = b;
+	a = c;
+	c = b;
 	b = x;
-	c = y;
 	printf("(\Znachenie a= %i, \nZnachenie b= %i, \nZnachenie c= %i)", a, b, c);
 	return 0;
 }
