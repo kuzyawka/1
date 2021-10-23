@@ -1,3 +1,5 @@
+
+1)
 #include <stdio.h>
 int main()
 {
@@ -12,4 +14,88 @@ int main()
 	b = x;
 	printf("(\nZnachenie a= %i, \nZnachenie b= %i", a, b);
 	return 0;
+}
+
+
+
+2)
+#include <stdio.h>
+int main()
+{
+	printf("Pomenyaem znacheniya b na a,c na b, a na c: ");
+	int a; int b; int c; int x;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%i", &c);
+	x = a;
+	a = c;
+	c = b;
+	b = x;
+	printf("(\Znachenie a= %i, \nZnachenie b= %i, \nZnachenie c= %i)", a, b, c);
+	return 0;
+}
+
+
+
+3)
+#include <stdio.h>
+int main()
+{
+	printf("Izmenim znachenie peremennoy c na a, c na b, a na c:");
+	int a, b, c, x1, x2;
+	printf("\nVvedem znachenie peremennoi a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem znachenie peremennoi b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem znachenie peremennoi c: ");
+	scanf_s("%i", &c);
+	x1 = b;
+	b = c;
+	c = a;
+	a = x1;
+	printf("(\nZnachenie a= %i, \nZnachenie b= %i, \nZnachenie c= %i)", a, b, c);
+	return 0;
+}
+
+
+4)
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem dloschad i perimetr pryamougolnika s vershinami (x1, y1) i (x2, y2) ");
+	int x1; int x2; int y1; int y2; int plosch; int per; int a; int b;
+	printf("\nVvedem x1: ");
+	scanf_s("%d", &x1);
+	printf("\nVvedem y1: ");
+	scanf_s("%d", &y1);
+	printf("\nVvedem x2: ");
+	scanf_s("%d", &x2);
+	printf("\nVvedem y2: ");
+	scanf_s("%d", &y2);
+	a = abs(y2 - y1);
+	b = abs(x1 - x2);
+	per = (a + b) * 2;
+	plosch = a * b;
+	printf("(\nPerimetr= %i, \nPloschad= %i)", per, plosch);
+	return 0;
+}
+
+
+
+
+5)
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem znachenie funkzii pri dannom x: ");
+	int x, rez;
+	printf("\nVvedem x: ");
+	scanf_s("%i", &x);
+	rez = 4 * pow((x-3), 6) - 7 * pow((x-3), 3) +2;
+	printf("\nRezultat= %i", rez);
 }
