@@ -99,3 +99,18 @@ int main()
 	rez = 4 * pow((x-3), 6) - 7 * pow((x-3), 3) +2;
 	printf("\nRezultat= %i", rez);
 }
+
+
+6)
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naidem znachenie a^8 ispolzuya vspomogatelnuy peremennuy i 3 operazii umnozheniya: ");
+	int a, x;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	x = pow(a, 4) * pow(a, 2) * a * a;
+	printf("\nZnachenie= %i", x);
+	return 0;
+}
