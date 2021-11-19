@@ -107,26 +107,20 @@ int main()
 }
 
 
-6.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+6.
 
+#include <stdio.h>
 int main()
 {
-	printf("Reshit A*x+B=0 pri a<>0, b - znacheniya: ");
-	int a1, a2, b1, b2, c1, c2, res; float x, y;
-	printf("\nVvedem a1: ");
+	int a1, a2, b1, b2, c1, c2; float x, y;
 	scanf_s("%i", &a1);
-	printf("\nVvedem b1: ");
-	scanf_s("%i", &b1); 
-	printf("\nVvedem a2: ");
 	scanf_s("%i", &a2);
-	printf("\nVvedem b2: ");
-	scanf_s("%i", &b2); 
-	printf("\nVvedem c1: ");
+	scanf_s("%i", &b1);
+	scanf_s("%i", &b2);
 	scanf_s("%i", &c1);
-	printf("\nVvedem c2: ");
 	scanf_s("%i", &c2);
-	x = (float)(c1 - c2 - y * (b1 - b2)) / (a1 - a2);
-	y = (float)(c1 - a1 * x) / b1;
-	printf("(\nX= %f, \nY= %f)", x, y);
+	y = (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1);
+	x = (c1 - b1 * y) / a1;
+	printf(("\nX= %f, \nY =%f"), x, y);
 	return 0;
 }
