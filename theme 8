@@ -1,0 +1,18 @@
+1.
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naity kolichestvo polnix kilobaytov faila iz baytov :");
+	int b; float k;
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	k = ((float) b / 1024);
+	printf("\nKilobaity= %f", ceil(k));
+	return 0;
+}
+
+
+2.
