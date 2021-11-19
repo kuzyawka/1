@@ -39,3 +39,27 @@ int main()
 3.
 
 
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naity ostavsheesya mesto bez otrezkov b na otrezke a (a>b) :");
+	int b, a; float k;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	if (a > b) {
+		k =floor( ((float)a / b));
+		printf("\nMesta ostalos= %f", a-k*b );
+	}
+	else printf("Neverno");
+	return 0;
+}
+
+
+
+4.
+
+
+
