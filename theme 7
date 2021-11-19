@@ -42,4 +42,24 @@ int main()
 }
 
 
+3.
+
+
+#include <stdio.h>
+int main()
+{
+	printf("Opredelit skolko stoit kg y konfet esli x kg stoit a rubley");
+	int a, x, y; float kg, zenay;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem x: ");
+	scanf_s("%i", &x);
+	printf("\nVvedem y: ");
+	scanf_s("%i", &y);
+	kg = (float)a / x;
+	zenay = kg * y;
+	printf(("\nKg= %f, \nZena y kg= %f"), kg, zenay);
+
+	return 0;
+}
 
