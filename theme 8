@@ -85,5 +85,22 @@ int main()
 5.
 
 
-
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Vivesti obratnoe chislo dannomu dvuznachnomu (9<a<100) :");
+	int a,res; div_t b, k;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	if ((a > 99) && (a < 1000)) {
+		b = div(a, 100);
+	
+		res = (a- b.quot*100)*10+b.quot;
+		printf("\nRezultat= %i", res);
+	}
+	else printf("Neverno");
+	return 0;
+}
 
