@@ -63,3 +63,23 @@ int main()
 	return 0;
 }
 
+
+4.
+
+
+#include <stdio.h>
+int main()
+{
+	printf("Opredelit rasstoyanie mezhdu udalyauschimisya drug ot druga avtomobilyami, skorosti v1 i v2 cherez vremya t: ");
+	int v1, v2, t, s; 
+	printf("\nVvedem v1a: ");
+	scanf_s("%i", &v1);
+	printf("\nVvedem v2: ");
+	scanf_s("%i", &v2);
+	printf("\nVvedem t: ");
+	scanf_s("%i", &t);
+	s = v1 * t + v2 * t;
+	printf("\nRasstoyanie spustya vremya t= %i", s);
+
+	return 0;
+}
