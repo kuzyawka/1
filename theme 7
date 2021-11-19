@@ -83,3 +83,25 @@ int main()
 
 	return 0;
 }
+
+
+5.
+
+
+#include <stdio.h>
+int main()
+{
+	printf("Reshit A*x+B=0 pri a<>0, b - znacheniya: ");
+	int a, b; float res;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	if (a != 0) {
+		res = (float)(-b) / a;
+
+		printf("\nResultat= %f", res);
+	}
+	else printf("Neverno");
+	return 0;
+}
