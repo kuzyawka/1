@@ -105,3 +105,28 @@ int main()
 	else printf("Neverno");
 	return 0;
 }
+
+
+6.!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+int main()
+{
+	printf("Reshit A*x+B=0 pri a<>0, b - znacheniya: ");
+	int a1, a2, b1, b2, c1, c2, res; float x, y;
+	printf("\nVvedem a1: ");
+	scanf_s("%i", &a1);
+	printf("\nVvedem b1: ");
+	scanf_s("%i", &b1); 
+	printf("\nVvedem a2: ");
+	scanf_s("%i", &a2);
+	printf("\nVvedem b2: ");
+	scanf_s("%i", &b2); 
+	printf("\nVvedem c1: ");
+	scanf_s("%i", &c1);
+	printf("\nVvedem c2: ");
+	scanf_s("%i", &c2);
+	x = (float)(c1 - c2 - y * (b1 - b2)) / (a1 - a2);
+	y = (float)(c1 - a1 * x) / b1;
+	printf("(\nX= %f, \nY= %f)", x, y);
+	return 0;
+}
