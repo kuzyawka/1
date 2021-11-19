@@ -16,3 +16,26 @@ int main()
 
 
 2.
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("Naity kolichestvo polnix otrezkov b na otrezke a (a>b) :");
+	int b, a; float k;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	if (a > b) {
+		k = ((float)a / b);
+		printf("\nKolichestvo otrezkov= %f", floor(k));
+	}
+	else printf("Neverno");
+	return 0;
+}
+
+
+3.
+
+
