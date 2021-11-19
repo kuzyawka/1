@@ -112,12 +112,19 @@ int main()
 #include <stdio.h>
 int main()
 {
+	printf("Naity znachenie sistemi lin uravneniy:");
 	int a1, a2, b1, b2, c1, c2; float x, y;
+	printf("\nVvedem a1: ");
 	scanf_s("%i", &a1);
+	printf("\nVvedem a2: ");
 	scanf_s("%i", &a2);
+	printf("\nVvedem b1: ");
 	scanf_s("%i", &b1);
+	printf("\nVvedem b2: ");
 	scanf_s("%i", &b2);
+	printf("\nVvedem c1: ");
 	scanf_s("%i", &c1);
+	printf("\nVvedem c2: ");
 	scanf_s("%i", &c2);
 	y = (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1);
 	x = (c1 - b1 * y) / a1;
