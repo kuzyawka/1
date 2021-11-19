@@ -1,0 +1,27 @@
+1.
+
+
+#include <stdio.h>
+int main()
+{
+	printf("Opredelit znachenie ugla 0<a<360 gradusov v radianax pri 180gradusov=pi");
+	int a; float znach; 
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	if ((a > 0) && (a < 360)) {
+		znach = (float)a / 180;
+		printf("\nZnachenie= %f", znach);
+	}
+	else {
+		printf("Neverno");
+	}
+
+	return 0;
+}
+
+
+
+2.
+
+
+
