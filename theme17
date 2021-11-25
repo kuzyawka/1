@@ -1,0 +1,35 @@
+1.
+
+
+#include <stdio.h>
+int main()
+{
+	printf("Nayti srednee arifmeticheskoe elementov massiva N ot K do L pri (1<=K<=L<=N)");
+	int *mas; int k, l, cou, i,j,n, s; float srzn;
+	cou = 0;
+	s = 0;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	printf("\nVvedem k: ");
+	scanf_s("%i", &k);
+	printf("\nVvedem l: ");
+	scanf_s("%i", &l);
+	mas = malloc(n * sizeof(int));
+	for (i = 0; i < n; i++) {
+		mas[i] = rand() % 100;
+		printf("\n%i", mas[i]);
+	}
+	for (j = k-1; j < l+1; j++) {
+		cou +=  mas[j];
+		
+		printf(("\nIspolzuytsya= %i, summa= %i"), mas[j], cou);
+	}
+	srzn = (float)cou / (l-k+1);
+	printf("\nSrednee znachenie = %f", srzn);
+	return 0;
+}
+
+
+2.
+
+
