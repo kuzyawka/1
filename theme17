@@ -31,5 +31,31 @@ int main()
 
 
 2.
-
+#include <stdio.h>
+int main()
+{
+	printf("Proverit, obrazuyt li elementy massiva N arifmeticheskuy progressiu. Esli da, to 1, esli net, to 0");
+	int *mas; int k, l, cou, i,j,n, s; float srzn;
+	cou = 0;
+	s = 0;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	
+	mas = malloc(n * sizeof(int));
+	for (i = 0; i < n; i++)   {
+	
+		a: mas[i] = rand();
+		for (j = 0; j < i; j++)
+			if (mas[i] == mas[j]) goto a;
+		printf("\n%i", mas[i]);
+	}
+	cou = mas[2] - mas[1];
+	for (j = 0; j < n-1; j++) {
+		if (mas[j + 1] = mas[j] + cou) continue;
+		else s += 1;
+	}
+	if (s = 0) printf("\nOtvet=1");
+	else printf("\nOtvet=0");
+	return 0;
+}
 
