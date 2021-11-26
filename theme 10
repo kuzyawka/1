@@ -105,3 +105,31 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Yavlyaetsya li chetirexznachnoe chislo odinakovim sprava-nalevo i sleva-napravo: ");
+	int a; div_t b, c, d, e;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+
+	b = div(a, 1000);
+	c = div(b.rem, 100);
+	d = div(c.quot, 10);
+	e=div(a, 10);
+	if ( (b.quot==e.rem)&&(c.quot==d.rem)) {
+		printf(" \nOTVET: Istinno");
+		
+	}
+	else
+		printf(" \nOTVET: Lozhno");
+	
+	return 0;
+}
+
+
+6.
+
+
+
