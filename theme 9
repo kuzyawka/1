@@ -83,3 +83,50 @@ int main()
 
 	return 0;
 }
+
+
+
+4.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Naiti kolichestvo kvadratov storonoi c v pramougolnike A B bez nalozheniy i ploschad nezanyatoi chasty: ");
+	int a, b, c, s, k; div_t v, n;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%i", &c);
+	v = div(a, c);
+	n = div(b, c);
+	if (c == 1) {
+		s = 0;
+		printf(("\nKolichestvo kvadratov= %i, \nOstavshayasya ploschad= %i"), a*b, s);
+		return 0;
+	}
+	if ((v.quot != 0) && (n.quot != 0)) {
+		if (v.quot > n.quot) {
+			s = a * b - v.quot * c * c;
+			k = v.quot;
+		}
+		if (v.quot < n.quot) {
+			s = a * b - n.quot * c * c;
+			k = n.quot;
+		}
+		if (v.quot = n.quot) {
+			k = v.quot;
+			s = a * b - v.quot * c * c;
+		}
+
+	}
+			printf(("\nKolichestvo kvadratov= %i, \nOstavshayasya ploschad= %i"), v.quot, s);
+
+	
+
+	return 0;
+}
