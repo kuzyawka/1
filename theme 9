@@ -130,3 +130,24 @@ int main()
 
 	return 0;
 }
+
+
+5.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Naity nomer stoletiya goda n:");
+	int n; div_t s;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	s = div(n, 100);
+	if (s.rem>0)
+		printf("\nStoletie= %i", s.quot+1);
+	else 
+
+	printf("\nStoletie= %i", s.quot);
+	return 0;
+}
