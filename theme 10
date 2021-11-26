@@ -22,4 +22,32 @@ int main()
 2.
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Proverit istinnost viskazivaniya a<b<c: ");
+	int a, b, c;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%i", &c);
+	if ((b > a) && (c > b) && (c > a))
+	printf("Istinno");
+	else 
+	printf("Lozhno");
+
+	return 0;
+}
+
+
+3.
+
+
+
+
+
+
 
