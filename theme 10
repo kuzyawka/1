@@ -74,4 +74,34 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Obrazuyt li zifri trexznachnogo chisla vozrastauschuy or ybivauschuy pisledovatelnost: ");
+	int a; div_t d, b, c;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+
+	d = div(a, 100);
+	b = div(a, 10);
+	c = div(b.quot, 10);
+	
+	if ( (d.quot>c.rem)&&(c.rem>b.rem)) {
+		printf(" \nOTVET: Istinno i ubivaet");
+		return 0;
+	}
+	if ((d.quot < c.rem) && (c.rem < b.rem)) {
+		printf(" \nOTVET: Istinno i vozrastaet");
+		return 0;
+	}
+	else printf("Neverno");
+	return 0;
+}
+
+
+5.
+
+
+
 
