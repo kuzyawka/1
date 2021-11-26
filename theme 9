@@ -1,0 +1,22 @@
+1.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Naity kolichestvo sekund proshedshix s nachala posledney minuti s nachala sutok:");
+	int n; div_t s;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	s = div(n, 60);
+
+
+	printf("\nKolichestvo sekund= %i",s.rem);
+	return 0;
+}
+
+
+2.
+
+
