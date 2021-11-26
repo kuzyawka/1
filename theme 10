@@ -167,5 +167,23 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Suschestvuet li treugolnuk so storonami a, b, c: ");
+	int a, b, c;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%i", &c);
+	if ((c+b > a) && (c+a > b)&&(b+a>c)) 
+		printf("Suschestvuet");
+		else printf("Ne suschestvuet");
+	
+	return 0;
+}
 
 
