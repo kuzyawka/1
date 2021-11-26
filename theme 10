@@ -133,3 +133,39 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Yavlyaetsya li treugolnik so storonami a, b, c pryamougolnim: ");
+	int a, b, c;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%i", &c);
+	if ((c > a) && (c > b)) {
+		if (c * c == a * a + b * b) printf("Yavlyaetsya");
+		else printf("Ne yavlaetsya");
+	}
+	if ((b > a) && (b > c)) {
+		if ( b*b == a * a +c * c) printf("Yavlyaetsya");
+		else printf("Ne yavlaetsya");
+	}
+	if ((a > b) && (a > c)) {
+		if (a * a == c * c + b * b) printf("Yavlyaetsya");
+		else printf("Ne yavlaetsya");
+	}
+	return 0;
+}
+
+
+
+7.
+
+
+
+
+
+
