@@ -110,12 +110,11 @@ int main()
 
 
 6.
-
 #include <stdio.h>
 int main()
 {
 	printf("Naity znachenie sistemi lin uravneniy:");
-	int a1, a2, b1, b2, c1, c2; float x, y;
+	int a1, a2, b1, b2, c1, c2, opr, opr1, opr2; float x, y;
 	printf("\nVvedem a1: ");
 	scanf_s("%i", &a1);
 	printf("\nVvedem a2: ");
@@ -128,8 +127,11 @@ int main()
 	scanf_s("%i", &c1);
 	printf("\nVvedem c2: ");
 	scanf_s("%i", &c2);
-	y = (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1);
-	x = (c1 - b1 * y) / a1;
+	opr = a1 * b2 - a2 * b1;
+	opr1 = c1 * b2 - c2 * b1;
+	opr2 = a1 * c2 - a2 * c1;
+	x = (float)opr1 / opr;
+	y = (float)opr2 / opr;
 	printf(("\nX= %f, \nY =%f"), x, y);
 	return 0;
 }
