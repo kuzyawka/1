@@ -47,3 +47,39 @@ int main()
 
 	return 0;
 }
+
+
+
+3.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Opredelot nimer dnya nedeli po chislu k (1-365), pri N ot 1 do 7- nomer pervogo dnyz nedeli goda :");
+	int n, k; div_t s; div_t a;
+	printf("\nVvedem k: ");
+	scanf_s("%i", &k);
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	s = div(n, 7);
+	a = div((s.rem + (n - 1)), 7);
+	if (a.rem==7)
+	printf("\nVoskresenie");
+	if (a.rem == 1)
+		printf("\nPonedelnik");
+	if (a.rem == 2)
+		printf("\nVtornik");
+	if (a.rem == 3)
+		printf("\nSreda");
+	if (a.rem == 4)
+		printf("\nChetverg");
+	if (a.rem == 5)
+		printf("\nPyatniza");
+	if (a.rem == 6)
+		printf("\nSubbota");
+
+	return 0;
+}
