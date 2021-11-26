@@ -50,4 +50,28 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Proverit, yavlyaetsya li chislo a dvuznachnim and chetnim: ");
+	int a; div_t d, b;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+
+	d = div(a, 100);
+	b = div(a, 2);
+	printf(("Div= %i, \nMod= %i"), d.quot, b.rem);
+	if ( (b.rem == 0)&&(d.quot==0)) {
+		printf(" \nOTVET: Dvuznachnoe i chetnoe");
+	}
+	else printf("\nOTVET: NE dvuznachnoe i chetnoe");
+	return 0;
+}
+
+
+4.
+
+
+
 
