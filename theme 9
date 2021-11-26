@@ -20,3 +20,30 @@ int main()
 2.
 
 
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Opredelot nimer dnya nedeli po chislu k (1-365), ot 1 do 7- nomer dnyz nedeli :");
+	int n; div_t s;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	s = div(n, 7);
+
+	if (s.rem==0)
+	printf("\nVoskresenie");
+	if (s.rem == 1)
+		printf("\nPonedelnik");
+	if (s.rem == 2)
+		printf("\nVtornik");
+	if (s.rem == 3)
+		printf("\nSreda");
+	if (s.rem == 4)
+		printf("\nChetverg");
+	if (s.rem == 5)
+		printf("\nPyatniza");
+	if (s.rem == 6)
+		printf("\nSubbota");
+
+	return 0;
+}
