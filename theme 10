@@ -1,0 +1,25 @@
+1.
+
+
+#include <stdlib.h>
+int main()
+{
+	printf("Proverit istinnost viskazivaniya a>2 and b<=3: ");
+	int a, b;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	if ((a>2)&&(b<=3))
+	printf("Istinno");
+	else 
+	printf("Lozhno");
+
+	return 0;
+}
+
+
+2.
+
+
+
