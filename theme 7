@@ -132,6 +132,8 @@ int main()
 	opr2 = a1 * c2 - a2 * c1;
 	x = (float)opr1 / opr;
 	y = (float)opr2 / opr;
+	if (x == -0) x = 0;
+	if (y == -0) y = 0;
 	printf(("\nX= %f, \nY =%f"), x, y);
 	return 0;
 }
