@@ -115,3 +115,26 @@ int main()
 
 
 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	printf("Opredelit, v kakoi koordinatnoi chetverti lezhit tocha, ne lezhaschaya na koordinatnix osyax : ");
+	int x, y;
+	printf("\nVvedem x: ");
+	scanf_s("%d", &x);
+	printf("\nVvedem y: ");
+	scanf_s("%d", &y);
+	if ((x > 0) && (y > 0)) printf("1 chetvert");
+	if ((x > 0) && (y <0)) printf("4 chetvert");
+	if ((x < 0) && (y > 0)) printf("2 chetvert");
+	if ((x < 0) && (y < 0)) printf("3 chetvert");
+	return 0;
+}
+
+
+5.
+
+
