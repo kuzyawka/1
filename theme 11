@@ -163,3 +163,30 @@ int main()
 
 
 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	printf("Opisanie zelogo chisla v diapazone 1-999 : ");
+	int x; div_t y, des, sot;
+	printf("\nVvedem x: ");
+	scanf_s("%d", &x);
+	y = div(x, 2);
+	des = div(x, 10);
+	sot = div(x, 100);
+	
+	if ((x > 0) && (y.rem==0)&&(des.quot==0)) printf(" chetnoe odnoznachnoe chislo");
+	if ((x > 0) && (y.rem == 0) && (des.quot > 0)&&(sot.quot==0)) printf(" chetnoe dvuznachnoe chislo");
+	if ((x > 0) && (y.rem == 0)  && (sot.quot > 0)) printf("chetnoe trexznachnoe chislo");
+	
+	if ((x > 0) && (y.rem != 0) && (des.quot == 0)) printf(" nechetnoe odnoznachnoe chislo");
+	if ((x > 0) && (y.rem != 0) && (des.quot > 0) && (sot.quot == 0)) printf(" nechetnoe dvuznachnoe chislo");
+	if ((x > 0) && (y.rem != 0) && (sot.quot > 0)) printf(" nechetnoe trexznachnoe chislo");
+	
+	
+	
+	return 0;
+}
+
