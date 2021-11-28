@@ -77,4 +77,41 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	printf("Naiti minimalnoe rasstoyanie ot tochki b or c do tochki a: ");
+	int xa,ya, xb,yb, xc, yc, pc, pb; float rb, rc;
+	printf("\nVvedem xa: ");
+	scanf_s("%d", &xa);
+	printf("\nVvedem ya: ");
+	scanf_s("%d", &ya);
+	printf("\nVvedem xb: ");
+	scanf_s("%d", &xb);
+	printf("\nVvedem yb: ");
+	scanf_s("%d", &yb);
+	printf("\nVvedem xc: ");
+	scanf_s("%d", &xc);
+	printf("\nVvedem yc: ");
+	scanf_s("%d", &yc);
+	pb = pow(xb - xa, 2) + pow(yb - ya, 2);
+	pc = pow(xc - xa, 2) + pow(yc - ya, 2);
+	rb = sqrt(pb);
+	rc = sqrt(pc);
+	if (rb < rc)
+		printf(("\nRasstoyanie= %f, \nTochka b"), rb);
+	else printf(("\nRasstoyanie= %f, \nTochka c"), rc);
+	return 0;
+}
+
+
+
+
+4.
+
+
+
+
 
