@@ -35,3 +35,46 @@ int main()
 
 
 
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	printf("Naiti summu dvux naibolshix chisel iz trex a, b, c: ");
+	int a, b, c;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	printf("\nVvedem c: ");
+	scanf_s("%i", &c);
+	if ((a > c) || (a > b)) {
+		if (b > c)
+			printf("summa= %i", a + b);
+		else printf("summa= %i", a + c);
+		return 0;
+
+	}
+	if ((b > c) || (b > a)) {
+		if (a > c)
+			printf("summa= %i", a + b);
+		else printf("summa= %i", b + c);
+		return 0;
+	}
+	if ((c > a) || (c > b)) {
+		if (b > a)
+			printf("summa= %i", c + b);
+		else printf("summa= %i", a + c);
+		return 0;
+	}
+	return 0;
+}
+
+
+3.
+
+
+
+
+
+
