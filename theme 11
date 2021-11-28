@@ -138,3 +138,28 @@ int main()
 5.
 
 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	printf("Opisanie zelogo chisla : ");
+	int x; div_t y;
+	printf("\nVvedem x: ");
+	scanf_s("%d", &x);
+	y = div(x, 2);
+	if ((x ==0)) printf("Nulevoe chislo");
+	if ((x > 0) && (y.rem==0)) printf("polozhitelnoe chetnoe chislo");
+	if ((x < 0) && (y.rem == 0)) printf("otrizatelnoe chetnoe chislo");
+	if ((x > 0) && (y.rem!=0)) printf("polozhitelnoe nechetnoe chislo");
+	if ((x < 0) && (y.rem != 0)) printf("otrizatelnoe nechetnoe chislo");
+	return 0;
+}
+
+
+
+6.
+
+
+
