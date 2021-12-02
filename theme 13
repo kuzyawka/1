@@ -110,3 +110,30 @@ int main()
 
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include<math.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	printf("Дано вещественное число A и целое число N (> 0). Используя один цикл, найти значение выражения: ");
+	float d, i; int n, y, s, a;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	
+	s = 1;
+	y = -1;
+	for (i = 1; i <= n; i ++) {
+		s =s+ (pow(a, i)*y);
+		y = y * (-1);
+	}
+	printf("\nSumma = % i", s);
+	return 0;
+}
+
+
