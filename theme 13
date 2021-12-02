@@ -1,0 +1,29 @@
+1.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	printf("Дано вещественное число — цена 1 кг конфет. Вывести стоимость 0.1, 0.2, . . . , 1 кг конфет: ");
+	float d, i; int n;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	
+	for (i = 1; i <= 10;i++) {
+
+		d = (float)n * i*0.1;
+		printf("\nStoimost =%f", d);
+		
+	}
+return 0;
+}
+
+
+2.
+
+
