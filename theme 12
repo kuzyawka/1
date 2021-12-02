@@ -321,3 +321,175 @@ int main()
 
 return 0;
 }
+
+
+
+4.
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	printf("Дано целое число n в диапазоне 100–999. Вывести строку-описание данного числа : ");
+	int n; div_t a, b, c;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	a = div(n, 10);
+	b = div(n, 100);
+	c = div((b.rem), 10);
+	switch (b.quot) {
+	case 1:
+		printf("сто ");
+		break;
+	case 2:
+		printf("двести ");
+		break;
+	case 3:
+		printf("триста ");
+		break;
+	case 4:
+		printf("четыреста ");
+		break;
+	case 5:
+		printf("пятьсот ");
+		break;
+	case 6:
+		printf("шестьсот ");
+		break;
+	case 7:
+		printf("семьсот ");
+		break;
+	case 8:
+		printf("восемьсот ");
+		break;
+	case 9:
+		printf("девятьсот ");
+		break;
+	}
+	if ((c.quot >= 2) && (a.rem > 0)) {
+		switch (c.quot) {
+		case 2:
+			printf("двадцать ");
+			break;
+		case 3:
+			printf("тридцать ");
+			break;
+		case 4:
+			printf("сорок ");
+			break;
+		case 5:
+			printf("пятьдесят ");
+			break;
+		case 6:
+			printf("шестьдесят ");
+			break;
+		case 7:
+			printf("семьдесят ");
+			break;
+		case 8:
+			printf("восемьдесят ");
+			break;
+		case 9:
+			printf("девяносто ");
+			break;
+		}
+		switch (a.rem) {
+		case 1:
+			printf("один ");
+			break;
+		case 2:
+			printf("два ");
+			break;
+		case 3:
+			printf("три ");
+			break;
+		case 4:
+			printf("четыре ");
+			break;
+		case 5:
+			printf("пять ");
+			break;
+		case 6:
+			printf("шесть ");
+			break;
+		case 7:
+			printf("семь ");
+			break;
+		case 8:
+			printf("восемь ");
+			break;
+		case 9:
+			printf("девять ");
+			break;
+
+		}
+	}
+	else {
+		switch (b.rem) {
+		case 10:
+			printf("десять ");
+			break;
+		case 11:
+			printf("одиннадцать ");
+			break;
+		case 12:
+			printf("двенадцать ");
+			break;
+		case 13:
+			printf("тринадцать ");
+			break;
+		case 14:
+			printf("четырнадцать ");
+			break;
+		case 15:
+			printf("пятнадцать ");
+			break;
+		case 16:
+			printf("шестнадцать ");
+			break;
+		case 17:
+			printf("семнадцать ");
+			break;
+		case 18:
+			printf("восемнадцать ");
+			break;
+		case 19:
+			printf("девятнадцать ");
+			break;
+		case 20:
+			printf("двадцать ");
+			break;
+		case 30:
+			printf("тридцать ");
+			break;
+		case 40:
+			printf("сорок ");
+			break;
+		case 50:
+			printf("пятьдесят ");
+			break;
+		case 60:
+			printf("шестьдесят ");
+			break;
+		case 70:
+			printf("семьдесят ");
+			break;
+		case 80:
+			printf("восемьдесят ");
+			break;
+		case 90:
+			printf("девяносто ");
+			break;
+
+
+
+		}
+	}
+return 0;
+}
