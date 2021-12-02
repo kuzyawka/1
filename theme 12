@@ -215,6 +215,7 @@ return 0;
 
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -227,7 +228,7 @@ int main()
 	printf("\nVvedem n: ");
 	scanf_s("%i", &n);
 	a = div(n, 10);
-	if ((a.quot >= 2) && (a.rem > 0)) {
+	if ((a.quot >= 2) && (a.rem > 4)) {
 		switch (a.quot) {
 		case 2:
 			printf("двадцать ");
@@ -270,10 +271,38 @@ int main()
 			break;
 
 		}
-		printf("учебных задания");
+		printf("учебных заданий");
 	}
+	if ((a.quot >= 2) && (a.rem < 5)&&(a.rem!=0)) {
+		switch (a.quot) {
+		case 2:
+			printf("двадцать ");
+			break;
+		case 3:
+			printf("тридцать ");
+			break;
+		case 4:
+			printf("сорок ");
+			break;
 
-	else {
+		}
+		switch (a.rem) {
+		case 1:
+			printf("одно ");
+			break;
+		case 2:
+			printf("два ");
+			break;
+		case 3:
+			printf("три ");
+			break;
+		case 4:
+			printf("четыре ");
+			break;
+		}
+		printf("учебных задания ");
+	}
+	if (((n>9)&&(n<21))||(n==30)||(n==40)) {
 		switch (n) {
 		case 10:
 			printf("десять ");
@@ -318,8 +347,8 @@ int main()
 		}
 		printf("учебных заданий");
 	}
-
-return 0;
+	 
+	return 0;
 }
 
 
