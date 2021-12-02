@@ -27,3 +27,29 @@ return 0;
 2.
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	printf("Дано целое число N (> 0). Найти произведение 1.1 · 1.2 · 1.3 · . . . (N сомножителей).: ");
+	float d, i; int n, y;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	d = 1;
+	y = n;
+	i = 1.1;
+	for (y=1; y <= n; y++) {
+d =d*i ;
+i=i+0.1;
+}
+	printf("\nStoimost =%f", d);
+	return 0;
+}
+
+
+3.
+
+
