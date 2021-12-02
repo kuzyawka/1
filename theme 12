@@ -503,6 +503,7 @@ return 0;
 
 
 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -517,16 +518,16 @@ int main()
 	a = (int)((float)n / 60);
 	b = a * 60;
 	if (n - b == 0) {
-		d = 11;
-		c = 4;
+		c = 11;
+		d = 4;
 	}
 	else {
-		d= (int)((float)(n - b) / 12);
-		c= (int)((n - b) / 5);
+		c= (int)((float)(n - b) / 12);
+		d= (int)((n - b) / 5);
 	}
-	printf(("\nProverka %i  \nProverka %i "), c, d);
+	printf(("\nProverka %i  \nProverka %i "), d, c);
 	printf("\nгод ");
-	if ((d == 3) || (d == 4) || (d == 5)) {
+	if ((d == 2) || (d == 3) || (d == 4)) {
 		switch (c) {
 		case 0:
 			printf("зеленого ");
@@ -543,6 +544,7 @@ int main()
 		case 4:
 			printf("черного ");
 			break;
+
 		}
 		switch (d) {
 		case 2:
