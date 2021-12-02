@@ -493,3 +493,116 @@ int main()
 	}
 return 0;
 }
+
+
+
+
+5.
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	printf("По номеру года n определить его название.60-летний цикл, состоящий из 12- летних подциклов, обозначаемых названиями цвета: зеленый, красный, желтый, белый и черный.годы носят названия животных: крысы, коровы, тигра, зайца, дракона, змеи, лошади, овцы, обезьяны, курицы, собаки и свиньи.: ");
+	int n; int a, b, c, d;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	a = (int)((float)n / 60);
+	b = a * 60;
+	if (n - b == 0) {
+		d = 11;
+		c = 4;
+	}
+	else {
+		d= (int)((float)(n - b) / 12);
+		c= (int)((n - b) / 5);
+	}
+	printf(("\nProverka %i  \nProverka %i "), c, d);
+	printf("\nгод ");
+	if ((d == 3) || (d == 4) || (d == 5)) {
+		switch (c) {
+		case 0:
+			printf("зеленого ");
+			break;
+		case 1:
+			printf("красного ");
+			break;
+		case 2:
+			printf("желтого ");
+			break;
+		case 3:
+			printf("белого ");
+			break;
+		case 4:
+			printf("черного ");
+			break;
+		}
+		switch (d) {
+		case 2:
+			printf("тигра ");
+			break;
+		case 3:
+			printf("зайца ");
+			break;
+		case 4:
+			printf("дракона ");
+			break;
+		}
+	}
+	else {
+		switch (c) {
+		case 0:
+			printf("зеленой ");
+			break;
+		case 1:
+			printf("красной ");
+			break;
+		case 2:
+			printf("желтой ");
+			break;
+		case 3:
+			printf("белой ");
+			break;
+		case 4:
+			printf("черной ");
+			break;
+		}
+		switch (d) {
+		case 0:
+			printf("крысы ");
+			break;
+		case 1:
+			printf("коровы ");
+			break;
+		case 5:
+			printf("змеи ");
+			break;
+		case 6:
+			printf("лошади ");
+			break;
+		case 7:
+			printf("овцы ");
+			break;
+		case 8:
+			printf("обезьяны ");
+			break;
+		case 9:
+			printf("курицы ");
+			break;
+		case 10:
+			printf("собаки ");
+			break;
+		case 11:
+			printf("свиньи ");
+			break;
+		}
+	}
+return 0;
+}
