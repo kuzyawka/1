@@ -155,6 +155,57 @@ int main()
 
 2.
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
 
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	printf("Вывести направление робота.(«1» — север, «2» — запад, «3» — юг, «4» — восток) и принимать три цифровые команды: 0 — продолжать движение, 1 — поворот налево, −1 — поворот направо. C — исходное направление робота и целое число N — посланная ему команда: ");
+	int n,  c;
+	printf("\nVvedem с: ");
+	scanf_s("%i", &c);
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+
+
+switch (c) {
+case 1:
+	if (n == 0)
+		printf("Север");
+	if (n == 1)
+		printf("Запад");
+	if (n == -1)
+		printf("Восток");
+	break;
+case 2:
+	if (n == 0)
+		printf("Запад");
+	if (n == 1)
+		printf("Юг");
+	if (n == -1)
+		printf("Север");
+	break;
+case 3:
+	if (n == 0)
+		printf("Юг");
+	if (n == 1)
+		printf("Восток");
+	if (n == -1)
+		printf("Запад");
+	break;
+case 4:
+	if(n == 0)
+		printf("Восток");
+	if (n == 1)
+		printf("Север");
+	if (n == -1)
+		printf("Юг");
+	break;
+
+}
+return 0;
+}
 
 
