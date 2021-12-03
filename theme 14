@@ -126,3 +126,72 @@ int main() {
 
 
 
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf(". Даны целые положительные числа A и B. Найти их наибольший общий делитель (НОД), используя алгоритм Евклида");
+	int a, b, y, m, z; div_t  x, i;
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	if (a > b) {
+		x = div(a, b);
+		if (x.rem == 0) {
+			printf("NOD= %i", b);
+			return 0;
+		}
+		y = x.rem;
+	
+		m = b;
+		while (y != 0) {
+			z = y;
+			i = div(m, z);
+			m = z;
+			y = i.rem;
+		}
+		printf("NOD= %i", z);
+	}
+	else {
+		x = div( b, a);
+		if (x.rem == 0) {
+			printf("NOD= %i", a);
+			return 0;
+		}
+		y = x.rem;
+
+		m = a;
+		while (y != 0) {
+			z = y;
+			i = div(m, z);
+			m = z;
+			y = i.rem;
+		}
+		printf("NOD= %i", z);
+
+	}
+
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+6.
+
+
+
+
+
+
+
+
+
