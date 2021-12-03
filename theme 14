@@ -22,7 +22,51 @@ int main() {
 }
 
 
-2
+2.
 
 
-.
+
+#include <stdio.h>
+#include <locale.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf(". Даны положительные числа A и B (A > B). На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). Не используя операции умножения и деления, найти длину незанятой части отрезка A.");
+	int a, b, i,j, y; int mas[2][100];
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem b: ");
+	scanf_s("%i", &b);
+	
+	for (i = 0; i <= a; i++) {
+		mas[0][i] = 1;
+	}
+	y = 0;
+	for (j = 0; j <= b; j++) {
+		mas[1][j] = 1;
+		
+	}
+	printf("\nstroka raz: ");
+	for (i = 0; i < a; i++)
+		printf("%d ", mas[0][i]);
+	printf("\nstroka dva: ");
+	for (j = 0; j < b; j++) {
+		
+		printf("%d ", mas[1][j]);
+	}
+	for (i = 0; i <= a; i++) {
+		if (mas[0][i] != mas[1][i]) y++;
+	}
+	printf("\nOstalos mesta= %i", y);
+	return 0;
+}
+
+
+
+
+
+
+3.
+
+
+
+
