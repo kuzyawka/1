@@ -194,4 +194,23 @@ int main() {
 
 
 
-
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Дано целое число N (> 1), являющееся числом Фибоначчи: N = FK. Найти целое число K — порядковый номер числа Фибоначчи N.");
+	int a=1,b=1, c, n, k=2;
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	c = 0;
+	while (c < n) {
+		k++;
+		c = a + b;
+		b = a;
+		a = c;
+	}
+	printf("Poryadkoviy nomer = %i", k);
+	return 0;
+}
