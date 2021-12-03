@@ -98,4 +98,31 @@ int main() {
 
 
 
+#include <stdio.h>
+#include <locale.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Начальный вклад 1000 руб. Через каждый месяц  увеличивается на P процентов от имеющейся сумм 0 < P < 25. По данному P определить, через сколько месяцев размер вклада превысит 1100 руб., и вывести найденное количество месяцев K (целое число) и итоговый размер вклада S (вещественное число)..");
+	int p, k, s, i;float vkl;
+	printf("\nVvedem p: ");
+	scanf_s("%i", &p);
+	vkl = 1000;
+	k = 0;
+	while (vkl <= 1100) {
+		vkl = vkl + (vkl * (float)p / 100);
+		k++;
+	}
+	printf(("\nKolichestvo mesyazev %i , \nItogoviy razmer= %f"), k, vkl);
+	return 0;
+}
+
+
+
+
+
+5.
+
+
+
+
 
