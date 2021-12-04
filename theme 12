@@ -353,7 +353,7 @@ int main()
 
 
 
-4.
+4.ИСПРАВЛЕНО
 
 
 
@@ -520,10 +520,39 @@ int main()
 
 		}
 	}
-return 0;
+	if ((c.quot == 0) && (a.rem != 0)) {
+		switch (a.rem) {
+		case 1:
+			printf("один ");
+			break;
+		case 2:
+			printf("два ");
+			break;
+		case 3:
+			printf("три ");
+			break;
+		case 4:
+			printf("четыре ");
+			break;
+		case 5:
+			printf("пять ");
+			break;
+		case 6:
+			printf("шесть ");
+			break;
+		case 7:
+			printf("семь ");
+			break;
+		case 8:
+			printf("восемь ");
+			break;
+		case 9:
+			printf("девять ");
+			break;
+		}
+	}
+	return 0;
 }
-
-
 
 
 5.
