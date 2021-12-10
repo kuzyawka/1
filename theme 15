@@ -1,0 +1,33 @@
+1.
+
+
+
+#include <stdio.h>
+#include <locale.h>
+float func(float a)
+{
+	float b;
+	b = a * a * a;
+	return b;
+}
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Описать функцию PowerA3(A, B), вычисляющую третью степень числа A и возвращающую ее в переменной B (A — входной, B — выходной параметр; оба параметра являются вещественными). С помощью этой функции найти третьи степени пяти данных чисел");
+	float a1, a2, a3, a4, a5;
+	printf("\nVvedem 5 chisel:\n");
+	scanf_s("\n%f", &a1);
+	scanf_s("\n%f", &a2);
+	scanf_s("\n%f", &a3);
+	scanf_s("\n%f", &a4);
+	scanf_s("\n%f", &a5);
+	printf(("\nRezultat= \n%f, \n%f,\n%f, \n%f,\n%f "), func(a1), func(a2), func(a3), func(a4), func(a5));
+	return 0;
+}
+
+
+
+
+2.
+
+
+
