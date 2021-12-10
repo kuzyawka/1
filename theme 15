@@ -59,7 +59,29 @@ int main() {
 
 
 
-
+#include <stdio.h>
+#include <locale.h>
+float func(float r1,float  r2)
+{
+	float s, pi = 3.14;
+	s = r1 * r1 * pi - r2 * r2 * pi;
+	return s;
+}
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Описать функцию RingS(R1, R2) вещественного типа, находящую площадь кольца, заключенного между двумя окружностями с общим центром и радиусами R1 и R2 (R1 и R2 — вещественные, R1 > R2). С ее помощью найти площади трех колец, для которых даны внешние и внутренние радиусы");
+	float r1, r2; float mas[2][3]; int i, n =3;
+	for (i = 0; i <n; i++) {
+		printf("\nVvedem radius 1=");
+			scanf_s("%f", &mas[0][i]);
+			printf("\nVvedem radius 2=");
+			scanf_s(" %f", &mas[1][i]);
+		
+	}
+	for (i = 0; i < n; i++) 
+	printf("\nRezultat= %f", func(mas[0][i], mas[1][i]));
+	return 0;
+}
 
 
 
