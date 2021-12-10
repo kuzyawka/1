@@ -118,3 +118,45 @@ int main() {
 	printf(("\nChetvert tochki %i, %i  "),i+1,  func(mas[0][i], mas[1][i]));
 	return 0;
 }
+
+
+
+5.
+
+
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+float func(int n)
+{
+	int  i; div_t a; float facto;
+	a = div(n, 2);
+	facto= 1;
+	if (a.rem == 0) {
+		i = 2;
+		while (i <= n+1) {
+			
+			facto = facto * i;
+			i = i +2;
+		}
+	}
+	if (a.rem!=0){
+		i = 1;
+		while (i <= n+1) {
+			
+			facto = facto * i;
+			i = i + 2;
+		}
+	}
+	return facto;
+}
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Описать функцию Fact2(N) вещественного типа, вычисляющую двойной факториал: N!!= 1·3·5·. ..·N, если N — нечетное;N!!= 2·4·6·. ..·N, если N — четное(N > 0 — параметр целого типа; вещественное возвращаемое значение используется для того, чтобы избежать целочисленного переполнения при больших значениях N).");
+	int n;
+		printf("\nVvedem n: ");
+		scanf_s("%i", &n);
+	printf("\nDvoinoi factorial raven= %f ",  func(n));
+	return 0;
+}
