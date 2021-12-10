@@ -59,3 +59,40 @@ int main() {
 
 
 
+
+
+
+
+
+
+4.
+
+
+
+
+#include <stdio.h>
+#include <locale.h>
+int func(float x,float y)
+{
+int ch;
+if ((x > 0) && (y > 0)) ch = 1;
+if ((x < 0) && (y > 0)) ch = 2;
+if ((x < 0) && (y < 0)) ch = 3;
+if ((x > 0) && (y < 0)) ch = 4;
+	return ch;
+}
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Описать функцию Quarter(x, y) целого типа, определяющую номер координатной четверти, в которой находится точка с ненулевыми вещественными координатами (x, y). С помощью этой функции найти номера координатных четвертей для трех точек с данными ненулевыми координатами");
+	float x, y; float mas[2][3]; int i, n =3;
+	for (i = 0; i <n; i++) {
+		printf("\nVvedem x=");
+			scanf_s("%f", &mas[0][i]);
+			printf("\nVvedem y=");
+			scanf_s(" %f", &mas[1][i]);
+		
+	}
+	for (i = 0; i < n; i++) 
+	printf(("\nChetvert tochki %i, %i  "),i+1,  func(mas[0][i], mas[1][i]));
+	return 0;
+}
