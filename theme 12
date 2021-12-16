@@ -555,7 +555,7 @@ int main()
 }
 
 
-5.
+5.ИСПРАВЛЕНО
 
 
 
@@ -565,106 +565,127 @@ int main()
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
+#include <math.h>
 int main()
 {
 	setlocale(LC_ALL, "Rus");
 	printf("По номеру года n определить его название.60-летний цикл, состоящий из 12- летних подциклов, обозначаемых названиями цвета: зеленый, красный, желтый, белый и черный.годы носят названия животных: крысы, коровы, тигра, зайца, дракона, змеи, лошади, овцы, обезьяны, курицы, собаки и свиньи.: ");
-	int n; int a, b, c, d;
+	int n; div_t a, b, c;
 	printf("\nVvedem n: ");
 	scanf_s("%i", &n);
-	a = (int)((float)n / 60);
-	b = a * 60;
-	if (n - b == 0) {
-		c = 11;
-		d = 4;
-	}
-	else {
-		c = (int)((float)(n - b) / 12);
-		d = (int)((n - b) / 5);
-	}
-	if (c > 12) c = c - 12;
-	if (d > 5) d = d - 5;
-	printf(("\nProverka %i  \nProverka %i "), d, c);
 	printf("\nгод ");
-	if ((c == 2) || (c == 3) || (c == 4)) {
-		switch (d) {
-		case 0:
-			printf("зеленого ");
-			break;
-		case 1:
-			printf("красного ");
-			break;
-		case 2:
-			printf("желтого ");
-			break;
-		case 3:
-			printf("белого ");
-			break;
-		case 4:
-			printf("черного ");
-			break;
+	a = div(n, 10);
+	b = div(n, 12);
+	c = div((n + 8), 12);
+	switch (a.rem) {
+	case (0):
+		printf("бел");
+		break;
+	case ( 1):
+		printf("бел");
+		break;
+	case (2 ):
+		printf("черн");
+		break;
+	case ( 3):
+		printf("черн");
+		break;
+	case (4):
+		printf("зелен");
+		break;
+	case (5):
+		printf("зелен");
+		break;
+	case (6):
+		printf("красн");
+	
+		break;
+	case ( 7):
+		printf("красн");
 
-		}
-		switch (c) {
-		case 2:
-			printf("тигра ");
-			break;
-		case 3:
-			printf("зайца ");
-			break;
-		case 4:
-			printf("дракона ");
-			break;
-		}
+		break;
+	case (8):
+		printf("желт");
+		break;
+	case (9):
+		printf("желт");
+		break;
 	}
-	else {
-		switch (d) {
-		case 0:
-			printf("зеленой ");
-			break;
-		case 1:
-			printf("красной ");
-			break;
-		case 2:
-			printf("желтой ");
-			break;
-		case 3:
-			printf("белой ");
-			break;
-		case 4:
-			printf("черной ");
-			break;
-		}
-		switch (c) {
-		case 0:
-			printf("крысы ");
-			break;
-		case 1:
-			printf("коровы ");
-			break;
-		case 5:
-			printf("змеи ");
-			break;
-		case 6:
-			printf("лошади ");
-			break;
-		case 7:
-			printf("овцы ");
-			break;
-		case 8:
-			printf("обезьяны ");
-			break;
-		case 9:
-			printf("курицы ");
-			break;
-		case 10:
-			printf("собаки ");
-			break;
-		case 11:
-			printf("свиньи ");
-			break;
-		}
+	switch(b.rem) {
+	case (0):
+		printf("ой ");
+		break;
+	case (1):
+		printf("ой ");
+		break;
+	case (2):
+		printf("ой ");
+		break;
+	case (3):
+		printf("ой ");
+		break;
+	case (4):
+		printf("ой ");
+		break;
+	case (5):
+		printf("ой ");
+		break;
+	case (9):
+		printf("ой ");
+		break;
+	case (10):
+		printf("ой ");
+		break;
+	case (11):
+		printf("ой ");
+		break;
+	case (6):
+		printf("ого ");
+		break;
+	case (7):
+		printf("ого ");
+		break;
+	case (8):
+		printf("ого ");
+		break;
+	}
+	switch (c.rem) {
+	case 0:
+		printf("крысы ");
+		break;
+	case 1:
+		printf("коровы");
+		break;
+	case 2:
+		printf("тигра");
+		break;
+	case 3:
+		printf("зайца");
+		break;
+	case 4:
+		printf("дракона");
+		break;
+	case 5:
+		printf("змеи");
+		break;
+	case 6:
+		printf("лошади");
+		break;
+	case 7:
+		printf("овцы");
+		break;
+	case 8:
+		printf("обезьяны");
+		break;
+	case 9:
+		printf("курицы");
+		break;
+	case 10:
+		printf("собаки");
+		break;
+	case 11:
+		printf("свиньи");
+		break;
 	}
 	return 0;
 }
