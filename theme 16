@@ -1,0 +1,54 @@
+1.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Дано целое число N (> 0). Сформировать и вывести целочисленный массив размера N, содержащий N первых положительных нечетных чисел: 1, 3, 5, . . . .");
+	int mas[100] = {0}; int i, ai, a,n, ne; int masi[100] = {0};
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	a = 1;
+	if ((n > 101) && (n <= 201)) {
+		ai = n - 100; n = 100; ne = ai;
+		for (i = 0; i <= n-1; i++) {
+			mas[i] = a;
+			a = a + 2;
+		}
+		for (ai = 0; ai <= ne-1; ai++) {
+			masi[ai] = a;
+			a = a + 2;
+		}
+		printf("\nRezultat: ");
+		for (i = 0; i <= n-1; i++)
+			
+		printf("%i ", mas[i]);
+		for (ai = 0; ai <= ne-1; ai++)
+			printf("%i ", masi[ai]);
+	}
+	else {
+		printf("\nRezultat: ");
+		for (i = 0; i <= n-1; i++) {
+			mas[i] = a;
+			a = a + 2;
+		}
+
+		for (i = 0; i <= n-1; i++)
+			
+		printf("%i ", mas[i]);
+	}
+	return 0;
+	}
+  
+  
+  
+  
+  
+  2.
+  
+  
+  
+  
+  
