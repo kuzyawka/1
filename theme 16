@@ -143,4 +143,48 @@ for (i = 0; i <= n-1; i++)
 	
 	
 	
+	#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Дан массив A размера N. Вывести его элементы в следующем порядке: A1, AN , A2, AN-1, A3, AN-2,");
+	int a[1000] = {0}; int i,ai, y, s, f,n,b,d, ne; int mas[1000] = { 0 };
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	printf("Ishodniy massiv: ");
+	for (i = 0; i < n; i++) {
+		a[i] = rand() % 20;
+			printf("%d ", a[i]);
+	}
+		y = n - 1;
+		i = 0;
+		ai = 1;
+		s = 1;
+		printf("\nIspravlenniy massiv: ");
+		
+		while (i<=n-1) {
+			mas[i] = a[y];
+			i = i + 2;
+			y--;
+		}
+		while (ai <= n - 1) {
+			mas[ai] = a[s];
+			ai = ai + 2;
+			s++;
+		}
+		for (i = 0; i < n-1; i++) {
+			printf("%i ", mas[i]);
+		}
+	return 0;
+	}
+	
+	
+	
+	5.
+	
+	
+	
+	
 	
