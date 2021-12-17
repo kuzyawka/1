@@ -52,3 +52,57 @@ int main() {
   
   
   
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Дано целое число N (> 1), а также первый член A и знаменатель D геометрической прогрессии. Сформировать и вывести массив размера N, содержащий N первых членов данной прогрессии: A, A·D, A·D2 , A·D3 , . . .");
+	int mas[100] = {0}; int i, ai, a, f,n,d, ne; int masi[100] = {0};
+	printf("\nVvedem n: ");
+	scanf_s("%i", &n);
+	printf("\nVvedem a: ");
+	scanf_s("%i", &a);
+	printf("\nVvedem d: ");
+	scanf_s("%i", &d);
+	f = 0;
+	if ((n > 101) && (n <= 201)) {
+		ai = n - 100; n = 100; ne = ai;
+		for (i = 0; i <= n-1; i++) {
+			mas[i] = a*pow(d, f);
+			f = f + 1;
+		}
+		for (ai = 0; ai <= ne-1; ai++) {
+			masi[ai] = a*pow(d, f);
+			f = f + 1;
+		}
+		printf("\nRezultat: ");
+		
+		for (i = 0; i <= n-1; i++)
+			printf("%i ", mas[i]);
+		for (ai = 0; ai <= ne-1; ai++)
+			printf("%i ", masi[ai]);
+	}
+	else {
+		printf("\nRezultat: ");
+		for (i = 0; i <= n-1; i++) {
+			mas[i] = a*pow(d, f);
+			f = f + 1;
+		}
+
+		for (i = 0; i <= n-1; i++)
+			printf("%i ", mas[i]);
+	}
+	return 0;
+	}
+	
+	
+	
+	3.
+	
+	
+	
+	
+	
+	
