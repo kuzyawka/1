@@ -188,34 +188,34 @@ int main() {
 	
 	
 	
-	#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 #include <math.h>
 int main() {
 	setlocale(LC_ALL, "Rus");
-	printf("Дан массив A размера N. Вывести его элементы в следующем порядке: A1, AN , A2, AN-1, A3, AN-2,");
-	int a[1000] = { 0 }; int i, ai, y, s, f, n, b, d, ne; int mas[1000] = { 0 }; 
+	printf("Дан массив A размера N. Вывести вначале его элементы с нечетными номерами в порядке возрастания номеров, а затем — элементы с четными номерами в порядке убывания номеров");
+	int a[1000] = { 0 }; int i, ai, y, s, f, n, b, d, ne; int mas[1000] = { 0 }; div_t h;
 	printf("\nVvedem n: ");
 	scanf_s("%i", &n);
 	printf("Ishodniy massiv: ");
 	for (i = 0; i < n; i++) {
 		a[i] = rand() % 20;
-			printf("%d ", a[i]);
+		printf("%d ", a[i]);
 	}
 	printf("\nIspravlenniy massiv: ");
 	b = 1;
-	while (b <= n-1) {
+	while (b <= n - 1) {
 		printf("%i ", a[b]);
 		b = b + 2;
 	}
-	y = n-1;
+	h = div(n, 2);
+	if (h.rem = 0) y = n - 1;
+	else
+	 y = n - 2;
 	while (y >= 0) {
 		printf("%i ", a[y]);
 		y = y - 2;
 	}
 	return 0;
-	}
-	
-	
-	
+}
